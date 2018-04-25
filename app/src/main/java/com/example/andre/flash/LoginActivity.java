@@ -1,16 +1,10 @@
 package com.example.andre.flash;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
-import com.firebase.ui.auth.ResultCodes;
 
 import java.util.Arrays;
 
@@ -45,9 +39,9 @@ public class LoginActivity extends AppCompatActivity {
                         .setAvailableProviders(Arrays.asList(
 
                                 new AuthUI.IdpConfig.EmailBuilder().build() ,
-                                new AuthUI.IdpConfig.GoogleBuilder().build()/*,
+                                new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                new AuthUI.IdpConfig.FacebookBuilder().build()/*,
                                 new AuthUI.IdpConfig.PhoneBuilder().build(),
-                                new AuthUI.IdpConfig.FacebookBuilder().build(),
                                 new AuthUI.IdpConfig.TwitterBuilder().build()*/))
                         .setIsSmartLockEnabled(!BuildConfig.DEBUG, true)
                         .build(),
