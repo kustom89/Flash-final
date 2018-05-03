@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                                 new AuthUI.IdpConfig.PhoneBuilder().build(),
                                 new AuthUI.IdpConfig.TwitterBuilder().build()*/))
                         .setIsSmartLockEnabled(!BuildConfig.DEBUG, true)
+                        .setTheme(R.style.LoginTheme)
+                        .setLogo(R.mipmap.logo)
                         .build(),
                 RC_SIGN_IN);
 

@@ -10,4 +10,8 @@ public class CurrentUser {
     public FirebaseUser getCurrenteUser() {
         return currenteUser;
     }
+
+    public String email(){
+        return getCurrenteUser().getEmail();
+    }
 }

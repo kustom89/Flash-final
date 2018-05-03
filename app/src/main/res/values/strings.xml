@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Flash</string>
 
-        <!-- ... -->
-        <string name="facebook_application_id" translatable="false">362344394261518</string>
-
-
+    <!-- ... -->
+    <string name="facebook_application_id" translatable="false">362344394261518</string>
 
 
     <string name="dummy_button">Dummy Button</string>
@@ -16,5 +14,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
