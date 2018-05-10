@@ -1,4 +1,4 @@
-package com.example.andre.flash;
+package com.example.andre.flash.data;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -14,4 +14,13 @@ public class CurrentUser {
     public String email(){
         return getCurrenteUser().getEmail();
     }
+
+    public String ui(){
+       return currenteUser.getUid();
+    }
+
+    public String sanitizedEmail(String email){
+        return  email.replace("@","AT").replace(".","DOT");
+    }
+
 }

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingBottom="16dp"
-    tools:context=".DrawerFragment">
+    tools:context=".drawer.DrawerFragment">
 
     <com.github.siyamed.shapeimageview.CircularImageView
         android:id="@+id/avatarCi"

@@ -1,9 +1,13 @@
-package com.example.andre.flash;
+package com.example.andre.flash.login;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.andre.flash.BuildConfig;
+import com.example.andre.flash.MainActivity;
+import com.example.andre.flash.R;
+import com.example.andre.flash.data.CurrentUser;
 import com.firebase.ui.auth.AuthUI;
 
 import java.util.Arrays;

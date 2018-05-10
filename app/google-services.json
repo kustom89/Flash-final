@@ -15,11 +15,71 @@
       },
       "oauth_client": [
         {
+          "client_id": "222630399576-cgi20jinh0m11eiirdefuph16s77p1p3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.andre.flash",
+            "certificate_hash": "25a8400d36ff6de10a20263a7b6fad790de79d3d"
+          }
+        },
+        {
+          "client_id": "222630399576-b5r3106su3gjscrlau8d99mhr205q3mu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.andre.flash",
+            "certificate_hash": "020ec0420b7103d5b9d7467160bcfd7f2a25b7e9"
+          }
+        },
+        {
           "client_id": "222630399576-0502h0ug530lks5sqca3pdm0u4j0inja.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.andre.flash",
             "certificate_hash": "8223f2aef9c219620c07e0ab51e792cde7be0c1a"
+          }
+        },
+        {
+          "client_id": "222630399576-gm87lbolrlirn1qn5ml67v5tgc299jdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgDEIJXd48lBO390mP0yNSRlTlMHxHRlw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222630399576-gm87lbolrlirn1qn5ml67v5tgc299jdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222630399576:android:2d97f5da3525ceb5",
+        "android_client_info": {
+          "package_name": "com.example.kustom.pba3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222630399576-284g7pit3ptla4kb2tqstucrb9jqikgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kustom.pba3",
+            "certificate_hash": "25a8400d36ff6de10a20263a7b6fad790de79d3d"
           }
         },
         {
