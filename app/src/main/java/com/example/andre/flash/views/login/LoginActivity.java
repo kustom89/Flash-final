@@ -1,4 +1,4 @@
-package com.example.andre.flash.login;
+package com.example.andre.flash.views.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
         if(new CurrentUser().getCurrenteUser()!=null){
-            logger();
+            logged();
         }else{
             singUp();
         }
@@ -61,12 +61,12 @@ public class LoginActivity extends AppCompatActivity {
 
         if(RC_SIGN_IN == requestCode){
             if(RESULT_OK== resultCode){
-                logger();
+                logged();
             }
         }
     }
 
-    private void logger(){
+    private void logged(){
         Intent intent= new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

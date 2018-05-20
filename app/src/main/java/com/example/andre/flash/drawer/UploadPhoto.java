@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.example.andre.flash.data.CurrentUser;
+import com.example.andre.flash.data.EmailProcessor;
 import com.example.andre.flash.data.Nodes;
 import com.example.andre.flash.data.PhotoPreference;
 import com.example.andre.flash.models.LocalUser;
@@ -24,8 +25,7 @@ public class UploadPhoto {
     public void toFirebase(String path){
 
         final CurrentUser currentUser= new CurrentUser();
-
-        String folder= currentUser.sanitizedEmail(currentUser.email() + "/");
+        String folder= new EmailProcessor().sanitizedEmail(currentUser.email() + "/");
         String photoName = "avatar.jpeg";
         String baseUrl="gs://flash-84da6.appspot.com/avatars/";
         String refUrl = baseUrl + folder + photoName;
@@ -42,8 +42,8 @@ public class UploadPhoto {
                 user.setEmail(currentUser.email());
                 user.setName(currentUser.getCurrenteUser().getDisplayName());
                 user.setPhoto(url);
-                user.setUid(currentUser.ui());
-                String key = currentUser.sanitizedEmail(currentUser.email());
+                user.setUid(currentUser.uid());
+                String key = new EmailProcessor().sanitizedEmail(currentUser.email());
                 new Nodes().user(key).setValue(user);
                 Log.d("user", user.getName());
                 FirebaseDatabase.getInstance().getReference().child("users").child(key).setValue(user);

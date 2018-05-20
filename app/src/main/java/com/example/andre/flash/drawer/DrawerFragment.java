@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.example.andre.flash.R;
 import com.example.andre.flash.data.CurrentUser;
-import com.example.andre.flash.login.LoginActivity;
+import com.example.andre.flash.views.login.LoginActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.frosquivel.magicalcamera.MagicalCamera;
 import com.frosquivel.magicalcamera.MagicalPermissions;
