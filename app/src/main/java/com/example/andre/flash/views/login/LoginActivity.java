@@ -20,29 +20,27 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 343;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-        if(new CurrentUser().getCurrenteUser()!=null){
+        if (new CurrentUser().getCurrentUser() != null) {
             logged();
-        }else{
+        } else {
             singUp();
         }
 
 
-
-
     }
-    private void singUp(){
+
+    private void singUp() {
         startActivityForResult(
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(Arrays.asList(
 
-                                new AuthUI.IdpConfig.EmailBuilder().build() ,
+                                new AuthUI.IdpConfig.EmailBuilder().build(),
                                 new AuthUI.IdpConfig.GoogleBuilder().build(),
                                 new AuthUI.IdpConfig.FacebookBuilder().build()/*,
                                 new AuthUI.IdpConfig.PhoneBuilder().build(),
@@ -59,15 +57,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(RC_SIGN_IN == requestCode){
-            if(RESULT_OK== resultCode){
+        if (RC_SIGN_IN == requestCode) {
+            if (RESULT_OK == resultCode) {
                 logged();
             }
         }
     }
 
-    private void logged(){
-        Intent intent= new Intent(this, MainActivity.class);
+    private void logged() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

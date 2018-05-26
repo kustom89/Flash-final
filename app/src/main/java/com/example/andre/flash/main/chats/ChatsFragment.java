@@ -15,12 +15,15 @@ import android.view.ViewGroup;
 import com.example.andre.flash.R;
 import com.example.andre.flash.adapters.ChatListener;
 import com.example.andre.flash.adapters.ChatsAdapter;
+import com.example.andre.flash.models.Chat;
 import com.example.andre.flash.views.login.chat.ChatActivity;
 
 
 public class ChatsFragment extends Fragment implements ChatListener {
-    public static final String CHAT_KEY = "com.example.andre.flash.main.chats.KEY.CHAT_KEY";
-    public static final String CHAT_RECEIVER = "com.example.andre.flash.main.chats.KEY.CHAT_RECEIVER";
+
+
+    public static final String CHAT ="com.example.andre.flash.main.chats.KEY.CHAT";
+    private ChatsAdapter adapter;
 
 
     public ChatsFragment() {
@@ -29,12 +32,7 @@ public class ChatsFragment extends Fragment implements ChatListener {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_chats, container, false);
@@ -44,30 +42,31 @@ public class ChatsFragment extends Fragment implements ChatListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerVW);
-
+        RecyclerView recyclerView= view.findViewById(R.id.recyclerVW);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
-        ChatsAdapter adapter = new ChatsAdapter(getActivity(),this);
 
+        adapter = new ChatsAdapter(getActivity(), this);
         recyclerView.setAdapter(adapter);
 
 
 
     }
-
     @Override
-    public void clicked(String key, String mail) {
+    public void clicked(Chat chat) {
         Intent intent = new Intent(getActivity(), ChatActivity.class);
-        intent.putExtra(CHAT_KEY,key);
-        intent.putExtra(CHAT_RECEIVER,mail);
+        intent.putExtra(CHAT,chat);
         startActivity(intent);
 
-
-
         //Toast.makeText(getContext(), key+mail, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
 
 
-        
+
     }
 }

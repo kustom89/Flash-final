@@ -40,7 +40,7 @@ public class UploadPhoto {
 
                 LocalUser user = new LocalUser();
                 user.setEmail(currentUser.email());
-                user.setName(currentUser.getCurrenteUser().getDisplayName());
+                user.setName(currentUser.getCurrentUser().getDisplayName());
                 user.setPhoto(url);
                 user.setUid(currentUser.uid());
                 String key = new EmailProcessor().sanitizedEmail(currentUser.email());

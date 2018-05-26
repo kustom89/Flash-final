@@ -8,6 +8,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:222630399576:android:f18798c3828132b9",
+        "android_client_info": {
+          "package_name": "cl.octavionancul.flash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222630399576-ce1drd6vm66ob1mc5cc299enjfuko3rh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.octavionancul.flash",
+            "certificate_hash": "25a8400d36ff6de10a20263a7b6fad790de79d3d"
+          }
+        },
+        {
+          "client_id": "222630399576-gm87lbolrlirn1qn5ml67v5tgc299jdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgDEIJXd48lBO390mP0yNSRlTlMHxHRlw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222630399576-gm87lbolrlirn1qn5ml67v5tgc299jdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:222630399576:android:c3fa84c0da0c73ed",
         "android_client_info": {
           "package_name": "com.example.andre.flash"

@@ -3,6 +3,7 @@ package com.example.andre.flash.adapters;
 import android.arch.lifecycle.LifecycleOwner;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ public class ChatsAdapter extends FirebaseRecyclerAdapter<Chat, ChatsAdapter.Cha
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull final ChatHolder holder, int position, @NonNull Chat model) {
+    protected void onBindViewHolder(@NonNull final ChatHolder holder, final int position, @NonNull final Chat model) {
         Picasso.get().load(model.getPhoto())
                 .centerCrop()
                 .fit()
@@ -49,8 +50,11 @@ public class ChatsAdapter extends FirebaseRecyclerAdapter<Chat, ChatsAdapter.Cha
             @Override
             public void onClick(View v) {
                 Chat auxChat =  getItem(holder.getAdapterPosition());
-                //   getRef(holder.getAdapterPosition()).getKey();
-                listener.clicked(auxChat.getKey(),auxChat.getReceiver());
+                listener.clicked(auxChat);
+                //auxChat.getKey(),auxChat.getReceiver()
+
+                Log.d("TIMESTAMP", String.valueOf(model.getTimestamp()));
+
             }
         });
 
